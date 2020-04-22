@@ -20,6 +20,6 @@ mutation { createLabel(data: { name: "Needs Update" }) { id name
 
 } }
 
-+ Prisma Console https://us1.prisma.sh/k-semenza-a8c44e/demo-server/dev/_admin
++ Prisma Console http://localhost:4466/_admin
 
 + Prisma Playground cmd: prisma playground
