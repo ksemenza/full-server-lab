@@ -20,6 +20,107 @@ mutation { createLabel(data: { name: "Needs Update" }) { id name
 
 } }
 
++ Tag Query
+query {
+  tags {
+    id
+    name
+    isPublished
+  }
+}
+
++ Labels Query
+query {
+  labels {
+    id
+    name
+    isAdded
+  }
+}
+
++ Tags and Labels Query
+query{
+  tags {
+    id
+    name
+    isPublished
+    labels {
+      id
+      name
+      isAdded
+    }
+  }
+}
+
++ Create Tag
+mutation { 
+  createTag(
+    data: { 
+      name: "Lab23" }) 
+  { 
+    id 
+    name
+
+} }
+
++ Create Label
+mutation { 
+    createLabel
+  (data: 
+    { name: 
+      "Needs Update" 
+    }) 
+  { 
+    id 
+    name
+
+} 
+}
+
++ Create Tag and connected Label
+mutation { 
+  createTag(
+    data: { 
+      name: "Boots"
+  labels: {
+    create: {
+      name: "Connect"
+    }
+
+  }
+    }) 
+  { 
+    id 
+    name
+  } 
+}
+ 
+ + Delete Tag
+ 
+mutation {
+  deleteTag(where: {
+    id: "TAG ID"
+  }) {
+    id
+    name
+  }
+}
+
++ Update Tag
+
+mutation {
+  updateTag(
+    where: {
+      id: "ck9bzkqro007y07659ddovhty"
+    }
+    data: {
+      name:"Prisma"
+    }
+  ) {
+    id
+  }
+}
+
 + Prisma Console http://localhost:4466/_admin
 
 + Prisma Playground cmd: prisma playground
