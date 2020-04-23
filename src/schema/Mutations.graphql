@@ -1,0 +1,5 @@
+type Mutation {
+createTag(newTag: CreateTagInput!): Tag
+deleteTag(tagId:String!) :[Tag!]
+}
+

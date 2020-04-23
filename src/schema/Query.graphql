@@ -1,0 +1,5 @@
+type Query {
+tag: Tag
+labels(tagId:String!):[Label]
+label(labelId:String!): Label
+}
