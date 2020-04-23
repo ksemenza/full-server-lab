@@ -3,3 +3,9 @@ tag: Tag
 labels(tagId:String!):[Label]
 label(labelId:String!): Label
 }
+
+# Prisma Schema
+# type Query {
+# tagById(tagId: ID!): Tag
+# addedLabel: [Label]
+# }

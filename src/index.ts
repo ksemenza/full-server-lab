@@ -1,4 +1,4 @@
-import  resolvers  from './resolvers/resolvers'
+import  resolvers  from './resolvers'
 import * as path from 'path'
 import express = require('express');
 import {importSchema} from 'graphql-import'
@@ -34,5 +34,5 @@ server.applyMiddleware({
 })
 
 app.listen({ port: process.env.PORT }, () => {
-    console.log('Server rocking on PORT', process.env.PORT)
+    console.log('Server rocking on PORT', process.env.PORT || 4466)
 })

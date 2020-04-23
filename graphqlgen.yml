@@ -12,5 +12,5 @@ models:
 output: ./src/generated/graphqlgen.ts
 
 resolver-scaffolding:
-  output: ./src/generated/resolvers
+  output: ./src/resolver/
   layout: file-per-type

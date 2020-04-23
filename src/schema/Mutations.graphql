@@ -1,5 +1,10 @@
 type Mutation {
-createTag(newTag: CreateTagInput!): Tag
+createTag(newTag: createTagInput!): Tag
 deleteTag(tagId:String!) :[Tag!]
 }
 
+# Prisma Mutation
+#type Mutation {
+# createTag(name: String!): Tag
+# createLabel(name: String!, tagId: ID!): Label
+# markLabelAsAdded(labelId: ID!): Label}

@@ -1,15 +1,6 @@
-type Query {
-  tagById(tagId: ID!): Tag
-  addedLabel: [Label]
-}
+# import Query.* from "Query.graphql"
+# import Mutation.* from "Mutations.graphql"
 
-type Mutation {
-  createTag(name: String!): Tag
-  createLabel(name: String!, tagId: ID!): Label
-  markLabelAsAdded(labelId: ID!): Label
-
-
-}
 
 type Tag {
   id: ID!
@@ -25,5 +16,9 @@ type Label {
 }
 
 input createTagInput {
+name:String!
+}
+
+input createLabelInput {
 name:String!
 }
