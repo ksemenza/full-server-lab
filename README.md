@@ -5,21 +5,7 @@ Prisma server includes resolvers, schema, tags, labels, and docker
 
 Prisma Playground
 
- + QUERY
-
-query { tags{ name
-
-labels { name } } }
-
- + MUTATION
-mutation { createTag(data: { name: "Boot-strap" }) { id name
-
-} }
-
-mutation { createLabel(data: { name: "Needs Update" }) { id name
-
-} }
-
+### Queries
 + Tag Query
 query {
   tags {
@@ -52,6 +38,7 @@ query{
   }
 }
 
+### Create 
 + Create Tag
 mutation { 
   createTag(
@@ -94,7 +81,8 @@ mutation {
     name
   } 
 }
- 
+
+### Delete
  + Delete Tag
  
 mutation {
@@ -106,6 +94,7 @@ mutation {
   }
 }
 
+### Update
 + Update Tag
 
 mutation {

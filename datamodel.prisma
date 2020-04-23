@@ -7,7 +7,6 @@ type Tag {
   labels: [Label]
 }
 
-
 type Label {
   id: ID! @id
   name: String! @unique
